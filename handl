@@ -1,6 +1,7 @@
-[{ id: 0,
-    name: 'Leon',
-    music: ['Rock', 'Metal', 'Dubstep', 'Electro']
+{
+    'id': 0,
+    'name': 'Leon',
+    'music': ['Rock', 'Metal', 'Dubstep', 'Electro']
 }, {
     id: 1,
     name: 'Chris',
@@ -13,4 +14,4 @@
     id: 3,
     name: 'Allyce',
     music: ['Pop', 'RnB', 'Hip Hop']
-}];
+}
