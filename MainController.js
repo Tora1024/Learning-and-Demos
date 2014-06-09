@@ -1,41 +1,18 @@
-/**
- * Created with AngularLabTest1.
- * User: Tora1024
- * Date: 2014-06-06
- * Time: 04:17 PM
- * To change this template use Tools | Templates.
- */
 app.controller("MainController", function($scope, $http, $parse) {
+   
     $scope.inputValue = "";
     
-    $http({method: 'POST', url: 'music.json'}).success(function(music) {
+    $http({method: 'GET', url: 'http://www.qyqdev.com/angular/getdata.php'}).success(function(music) {
              
         $scope.selectedPerson = 0;
         $scope.selectedGenre = null;
-        //$scope.people = music.data;
+        $scope.people = music.data;
         
-        console.log(music);
+        //console.log(music);
+        
     });
-  
-    
-    // example source
-    
-    
-    //console.log(fran);
     
     /*
-    
-    var datos = [
-							    {
-							        nombre: 'Matusalén',
-							        edad: 'Desconocida'
-							    },
-							    {
-							        nombre: 'Madonna',
-							        edad: 60
-							    }
-							];
-     
     $scope.people = [{
         id: 0,
         name: 'Leon',
@@ -56,4 +33,16 @@ app.controller("MainController", function($scope, $http, $parse) {
     */
     
     
+    // second level test
+    $http({method: 'GET', url: 'http://www.qyqdev.com/angular/getdata.php'}).
+    success(function(data, status, headers, config) {
+        console.log(data);
+    }).
+    error(function(data, status, headers, config) {
+      console.log(data);
+    });
+    
 });
+    
+    
+    
