@@ -2,8 +2,9 @@ app.controller("MainController", function($scope, $http, $parse) {
    
     $scope.inputValue = "";
     
-    $http({method: 'GET', url: 'http://www.qyqdev.com/angular/getdata.php'}).success(function(music) {
+    //$http({method: 'GET', url: 'http://www.qyqdev.com/angular/getdata.php'}).success(function(music) {
              
+    $http({method: 'GET', url: 'getdata.json'}).success(function(music) {
         $scope.selectedPerson = 0;
         $scope.selectedGenre = null;
         $scope.people = music.data;
@@ -34,6 +35,7 @@ app.controller("MainController", function($scope, $http, $parse) {
     
     
     // second level test
+    /*
     $http({method: 'GET', url: 'http://www.qyqdev.com/angular/getdata.php'}).
     success(function(data, status, headers, config) {
         console.log(data);
@@ -41,6 +43,7 @@ app.controller("MainController", function($scope, $http, $parse) {
     error(function(data, status, headers, config) {
       console.log(data);
     });
+    */
     
 });
     

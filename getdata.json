@@ -1,0 +1,19 @@
+{
+    "data": [{
+        "id": "0",
+        "name": "Leon",
+        "music": ["Rock", "Metal", "Dubstep", "Electro"]
+    }, {
+        "id": "1",
+        "name": "Chris",
+        "music": ["Rock", "Metal", "Dubstep", "Electro"]
+    }, {
+        "id": "2",
+        "name": "Harry",
+        "music": ["Rock", "Metal", "Romantic", "Electro"]
+    }, {
+        "id": "3",
+        "name": "Alyce",
+        "music": ["Rock", "Metal", "Dubstep", "Electro"]
+    }]
+}
