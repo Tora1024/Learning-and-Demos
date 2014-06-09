@@ -8,17 +8,11 @@
 
 app.controller("MainController", function($scope, $http){
 	$scope.inputValue = "";
-
 	
+    $scope.selectedPerson = 0;
+    $scope.selectedGenre = null;
 	
-	$http.get('music.json').then(function(music){
-        $scope.selectedPerson = 0;
-		$scope.selectedGenre = null;
-        $scope.people = music.data;
-    });
-	
-
-	$scope.peoplee = [
+	$scope.people = [
 		{
 			id: 0,
 			name: 'Leon',
@@ -59,4 +53,5 @@ app.controller("MainController", function($scope, $http){
 			]
 		}
 	];
+
 });
