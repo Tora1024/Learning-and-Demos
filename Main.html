@@ -8,14 +8,38 @@
 </head>
 <body>
 	<div id='content' ng-app='AngularLabApp' ng-controller='MainController'>
+        Binding en un input:
 		<input type='text' ng-model='inputValue' />
 		{{inputValue}}
-            
+        <br/><br/>
+        Binding de comboboxes:
 		<select ng-model='selectedPerson' ng-options='obj.name for obj in people'></select>
 		<select ng-model='selectedGenre'>
 			<option ng-repeat='label in people[selectedPerson.id].music'> {{label}}</option>
 		</select>
-              
+        <br/><br/>
+        Filtering:
+        <input type='text' ng-model='searchText' />
+        <ul>
+            <li ng-repeat='person in people | filter:searchText'>#{{person.id}} {{person.name}}</li>
+        </ul>
+        <br/><br/>
+        Hide and Show:
+        <input type='text' ng-model='searchText' />
+        <ul>
+            <li ng-repeat='person in people | filter:searchText' ng-show='person.live == true'>#{{person.id}} {{person.name}}</li>
+        </ul>
+        <ul>
+            <li ng-repeat='person in people | filter:searchText' ng-hide='person.live == false'>#{{person.id}} {{person.name}}</li>
+        </ul>
+        <br/><br/>
+        Events:
+        <input type='text' ng-model='searchText' />
+        <ul>
+            <li ng-repeat='person in people | filter:searchText' ng-show='person.live == true'>#{{person.id}} {{person.name}}</li>
+        </ul>
+        <input type='text' ng-model='newPerson' />
+        <button ng-click='addNew()'>Add</button>
 	</div>
 </body>
 </html>

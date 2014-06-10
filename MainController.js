@@ -18,4 +18,15 @@ app.controller("MainController", function($scope, $http){
           $scope.people = res.data;                
         });
 
+    $scope.newPerson = null;
+    $scope.addNew = function() {
+        if ($scope.newPerson != null && $scope.newPerson != "") {
+            $scope.people.push({
+                id: $scope.people.length,
+                name: $scope.newPerson,
+                live: true,
+                music: []
+            });
+        }
+    }
 });
