@@ -1,23 +1,23 @@
 [{ "id":0, "name":"Leon","music": [
-				'Rock',
-				'Metal',
-				'Dubstep',
-				'Electro'
+				"Rock",
+				"Metal",
+				"Dubstep",
+				"Electro"
 			] },
  { "id":1, "name":"Chris","music": [
-				'Indie',
-				'Drumstep',
-				'Dubstep',
-				'Electro'
+				"Indie",
+				"Drumstep",
+				"Dubstep",
+				"Electro"
 			]},
  { "id":2, "name":"Harry","music": [
-				'Rock',
-				'Metal',
-				'Thrash Metal',
-				'Heavy Metal'
+				"Rock",
+				"Metal",
+				"Thrash Metal",
+				"Heavy Metal"
 			] },
  { "id":3, "name":"Alyce","music": [
-				'Pop',
-				'RnB',
-				'Hip Hop'
+				"Pop",
+				"RnB",
+				"Hip Hop"
 			] }]
