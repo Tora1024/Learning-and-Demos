@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [{ "id":0, "name":"Leon","music": [
 				"Rock",
 				"Metal",
@@ -21,3 +22,22 @@
 				"RnB",
 				"Hip Hop"
 			]}]
+=======
+[{
+    "id": 0,
+    "name": "Leon",
+    "music": ['Rock', 'Metal', 'Dubstep', 'Electro']
+}, {
+    "id": 1,
+    "name": "Chris",
+    "music": ['Indie', 'Drumstep', 'Dubstep', 'Electro']
+}, {
+    "id": 2,
+    "name": "Harry",
+    "music": ['Rock', 'Metal', 'Thrash Metal', 'Heavy Metal']
+}, {
+    "id": 3,
+    "name": "Alyce",
+    "music": ['Pop', 'RnB', 'Hip Hop']
+}];
+>>>>>>> 0779afa106528bf97baf50bf6b437a1157b63478

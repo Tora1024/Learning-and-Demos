@@ -1,0 +1,10 @@
+{
+  "name": "CODIOGRUNT",
+  "version": "1.0.0",
+  "title": "Sample Project",
+  "homepage": "http://gruntjs.com",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-handlebars": "~0.8.0"
+  }
+}

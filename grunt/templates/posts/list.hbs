@@ -1,0 +1,12 @@
+<script type='text/x-handlebars' id='post-list-template'>
+    <h2>{{ title }}</h2>
+    <ul>
+        {{#each posts}}
+            <li>{{> post-item}}</li>
+        {{/each}}
+    </ul>
+</script>
+
+<script type='text/x-handlebars' id='post-item-template'>
+    <span class='post'>{{ title }} - {{ date }}</span>
+</script>
