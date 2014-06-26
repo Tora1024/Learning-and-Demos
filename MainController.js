@@ -7,7 +7,7 @@ app.controller("MainController", function($scope, $http, $parse) {
     $http({method: 'GET', url: 'getdata.json'}).success(function(music) {
         $scope.selectedPerson = 0;
         $scope.selectedGenre = null;
-        $scope.people = music.data;
+        $scope.people = music;
         
         //console.log(music);
         
