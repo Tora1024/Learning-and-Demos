@@ -14,25 +14,29 @@ var Board = React.createClass({
 
 var BoardSwitcher = React.createClass({
   getInitialState: function() {
-    // Start off by selecting the first board
     return {
-      selectedIndex: 0
+      selectedBoard: 0
     }
   },
 
   onToggleClick: function(evt) {
-    // Here's the meat of the problem. Notice how we can use this.props here (and anywhere else in the component).
-    // When this is called, React updates the state and updates the UI to reflect the new render output.
-    this.setState({
-      selectedIndex: (this.state.selectedIndex + 1) % this.props.numBoards
-    })
+    
+    if (this.state.selectedBoard + 1 < this.props.numBoards) {
+      this.setState({
+        selectedBoard: (this.state.selectedBoard + 1)
+      })
+    } else {
+      this.setState({
+        selectedBoard: 0
+      })
+    }
   },
 
   render: function() {
     var boards = [];
     for (var ii = 0; ii < this.props.numBoards; ii++) {
       // We can compare to state here so we're no longer always selecting the first board.
-      var isSelected = ii === this.state.selectedIndex;
+      var isSelected = ii === this.state.selectedBoard;
       boards.push(
         <Board index={ii} selected={isSelected} key={ii} />
       );
@@ -48,6 +52,6 @@ var BoardSwitcher = React.createClass({
 });
 
 ReactDOM.render(
-  <BoardSwitcher numBoards={3} />,
-  document.body
+  <BoardSwitcher numBoards={5} />,
+  document.getElementById('container')
 );
