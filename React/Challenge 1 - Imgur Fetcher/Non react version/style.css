@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+h1 {
+  color: #414142;
+  font-family: Arial;
+  text-align: center;
+  font-size: 46px;
+}
+
+.img-container {
+  border: solid  #6AC5AC 3px;
+  border-radius: 10px;
+  margin: 10px;
+  overflow: auto;
+}
+
+.img-container img {
+  float: left;
+  max-width: 50%;
+}
+
+.img-text {
+  float: left;
+  margin: 20px;
+  max-width: 500px;
+  color: #414142;
+  font-family: Arial;
+}
+
+.img-text h3 {
+  font-size: 30px;
+}
