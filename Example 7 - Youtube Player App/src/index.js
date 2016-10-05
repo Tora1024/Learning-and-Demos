@@ -16,13 +16,13 @@ class App extends Component {
       selectedVideo: null
     };
 
-    this.videoSearch('Smash bros 4');
+    this.videoSearch('Smash');
   }
 
   videoSearch(term) {
     YTSearch({ key: API_KEY, term: term}, (videos) => {
         this.setState({
-          videos: videos,
+          videos,
           selectedVideo: videos[0]
         });
         //ES6 suggar, only works when the key and the value have the same name.
@@ -32,10 +32,10 @@ class App extends Component {
 	render() {
     return ( 
       <div>
-        <SearchBar onSearchTermChange={term => this.videoSearch(term)}/>
+        <SearchBar onSearchTermChange={ term => this.videoSearch(term) }/>
         <VideoDetail video={ this.state.selectedVideo } />
         <VideoList 
-          onVideoSelect={selectedVideo => this.setState({selectedVideo})}
+          onVideoSelect={ selectedVideo => this.setState({selectedVideo}) }
           videos={ this.state.videos } />
       </div>
     );
