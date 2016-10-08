@@ -11,9 +11,9 @@
     position: relative;
     left: 50%;
     top: 50%;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
+    width: 300px;
+    height: 300px;
+    margin: -125px 0 0 -125px;
     border-radius: 50%;
     border: 3px solid transparent;
     border-top-color: #3D3825;
@@ -78,6 +78,17 @@ body {
     background-color: #e9e9e9 !important;
 }
 
+.logo-img {
+	width: 230px;
+    border-radius: 115px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -90px;
+    margin-left: -90px;
+}
+
 .profile-image {
 	width: 200px;
 }
+
