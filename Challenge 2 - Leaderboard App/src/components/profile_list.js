@@ -11,8 +11,6 @@ const ProfileList = ({profiles}) => {
 		);
 	});
 
-	console.log('cargando lista ' + profiles[0].profileImg);
-
 	return (
 		<ul className="col-md-4 list-group">
 			{profileItems}

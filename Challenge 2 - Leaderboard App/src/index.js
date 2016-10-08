@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 
-import ProfileList from './components/profile_list'
+import ProfileList from './components/profile_list';
+import Loading from './components/loading';
 
 import Axios from 'axios';
 
@@ -34,14 +35,13 @@ class App extends Component {
 		if(!this.state.profiles) {
 			return (
 				<div>
-					Loading...
+					<Loading />
 				</div>
 			);
 		}
 
 		return (
 			<div>
-				Since all images I was testing were kinda odd, I am testing them all to see if there is any real one:
 				<ProfileList profiles={this.state.profiles}/>
 			</div>
 		);
