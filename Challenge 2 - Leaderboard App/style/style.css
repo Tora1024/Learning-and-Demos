@@ -1,3 +1,5 @@
+/* Styles to set the loading animation up*/
+
 .loader-wrapper {
     position: fixed;
     top: 0;
@@ -74,8 +76,24 @@
     }
 }
 
+@font-face {
+    font-family: 'open-sans';
+    src: url('../fonts/opensans/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/opensans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/opensans/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/opensans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: #e9e9e9 !important;
+}
+
+/*Kinda hacky stuff to workaround the nuka slider*/
+.slider-decorator-0, .slider-decorator-1, .slider-decorator-2 {
+    display: none;
 }
 
 .logo-img {
@@ -86,6 +104,38 @@ body {
     left: 50%;
     margin-top: -90px;
     margin-left: -90px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    color: #eeeeee;
+    font-family: open-sans;
+    padding: 10px;
+    background-image: url("../images/logo.png");
+    background-color: #1f242a;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.header-slider {
+    text-align: center;
+}
+
+.header-logo {
+    width: 200px;
+}
+
+.container {
+
 }
 
 .profile-image {

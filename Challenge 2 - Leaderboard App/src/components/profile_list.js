@@ -6,13 +6,13 @@ const ProfileList = ({profiles}) => {
 		return (
 			<ProfileListItem
 				key={profile.userId} 
-				image={profile.profileImg}
+				profile={profile}
 			/>
 		);
 	});
 
 	return (
-		<ul className="col-md-4 list-group">
+		<ul className="list-group">
 			{profileItems}
 		</ul>
 	);

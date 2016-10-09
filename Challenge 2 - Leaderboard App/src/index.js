@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 
 import ProfileList from './components/profile_list';
 import Loading from './components/loading';
+import Header from './components/header';
 
 import Axios from 'axios';
 
@@ -13,7 +14,7 @@ class App extends Component {
 	    super();
 
 	    this.state = {
-	      	profiles: null
+	      	data: null
 	    };
 
 	    this.fetchProfiles(API_URL);
@@ -22,17 +23,16 @@ class App extends Component {
 	fetchProfiles(url) {
 		Axios.get(url)
 		.then((response) => {
-			this.setState({profiles : response.data.results});
+			this.setState({data : response.data});
 			console.log(response);
 		})
 		.catch(function (error) {
-			this.setState('error');
 			console.log(error);
 		});
 	}
 
 	render() {
-		if(!this.state.profiles) {
+		if(!this.state.data) {
 			return (
 				<div>
 					<Loading />
@@ -42,7 +42,8 @@ class App extends Component {
 
 		return (
 			<div>
-				<ProfileList profiles={this.state.profiles}/>
+				<Header headlines={this.state.data} />
+				<ProfileList profiles={this.state.data.results}/>
 			</div>
 		);
 	}
