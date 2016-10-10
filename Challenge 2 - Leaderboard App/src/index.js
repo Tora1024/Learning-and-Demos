@@ -4,6 +4,7 @@ import ReactDom from 'react-dom';
 import ProfileList from './components/profile_list';
 import Loading from './components/loading';
 import Header from './components/header';
+import Footer from './components/footer';
 
 import Axios from 'axios';
 
@@ -41,9 +42,10 @@ class App extends Component {
 		}
 
 		return (
-			<div>
-				<Header headlines={this.state.data} />
-				<ProfileList profiles={this.state.data.results}/>
+			<div className="parent-container">
+				<Header />
+				<ProfileList profiles={this.state.data.results} />
+				<Footer footerlines={this.state.data} />
 			</div>
 		);
 	}

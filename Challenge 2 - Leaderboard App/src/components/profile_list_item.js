@@ -8,10 +8,11 @@ const Item = ({profile}) => {
 	});
 
 	return (
-		<div className="list-group-item">
-			<p>{profile.rank}</p>
-			<img className="profile-image" src={profile.profileImg} />
-
+		<div className="list-group-item profile-list-item">
+			<p className="profile-list-item_rank" >{profile.rank}</p>
+			<div className="profile-image">
+				<img className="portrait" src={profile.profileImg} />
+			</div>
 			<p>{profile.userFirstName} {profile.userLastName}</p>
 			<p>Tests: {tests}</p>
 		</div>
