@@ -203,7 +203,7 @@ body {
     font-size: 25px;
     font-family: open-sans;
     padding: 10px;
-    /*background-image: url("../images/th.png");*/
+    background-image: url("../images/th.png");
     background-color: #1f242a;
     background-size: contain;
     background-position: right;
